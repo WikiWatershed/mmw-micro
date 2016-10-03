@@ -1,7 +1,15 @@
+resource "aws_cloudfront_origin_access_identity" "mmw_micro" {
+  comment = "identityMMWMicro"
+}
+
 resource "aws_cloudfront_distribution" "mmw_micro" {
   origin {
     domain_name = "${aws_s3_bucket.mmw_micro.id}.s3.amazonaws.com"
     origin_id   = "mmwMicroOriginEastId"
+
+    s3_origin_config {
+      origin_access_identity = "${aws_cloudfront_origin_access_identity.mmw_micro.cloudfront_access_identity_path}"
+    }
   }
 
   enabled             = true

@@ -13,6 +13,8 @@ Run project tests.
 "
 }
 
+SOURCE_ROOT="./src/app/"
+
 if [ "${BASH_SOURCE[0]}" = "${0}" ]
 then
     if [ "${1:-}" = "--help" ]
@@ -24,6 +26,8 @@ then
             shellcheck scripts/*.sh
         fi
 
+        pushd ${SOURCE_ROOT}
         npm run test
+        popd
     fi
 fi

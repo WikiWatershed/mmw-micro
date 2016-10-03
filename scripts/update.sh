@@ -18,7 +18,7 @@ Updates application by installing Node.js dependencies.
 }
 
 BUNDLE_ARGS=$*
-SOURCE_ROOT="/vagrant/src/app/"
+SOURCE_ROOT="./src/app/"
 
 if [ "${BASH_SOURCE[0]}" = "${0}" ]
 then
@@ -26,8 +26,10 @@ then
     then
         usage
     else
-        cd ${SOURCE_ROOT}
+        pushd ${SOURCE_ROOT}
         npm install ${NPM_ARGS}
-        /vagrant/scripts/bundle.sh ${BUNDLE_ARGS}
+        popd
+
+        ./scripts/bundle.sh "${BUNDLE_ARGS}"
     fi
 fi

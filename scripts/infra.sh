@@ -51,12 +51,10 @@ then
                 terraform plan \
                           -var-file="${MMW_MICRO_ENV}.tfvars" \
                           -out="${MMW_MICRO_ENV}.tfplan"
-                aws s3 sync --dryrun --delete ../../dist "s3://${MMW_MICRO_ENV}-mmw-micro-origin-us-east-1"
                 ;;
             apply)
                 terraform apply "${MMW_MICRO_ENV}.tfplan"
                 terraform remote push
-                aws s3 sync --delete ../../dist "s3://${MMW_MICRO_ENV}-mmw-micro-origin-us-east-1"
                 ;;
             *)
                 echo "ERROR: I don't have support for that Terraform subcommand!"

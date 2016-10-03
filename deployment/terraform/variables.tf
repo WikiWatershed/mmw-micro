@@ -21,3 +21,5 @@ variable "acm_certificate_arn" {}
 variable "r53_public_hosted_zone_id" {}
 
 variable "r53_public_hosted_zone_record" {}
+
+variable "iam_publish_principal_arn" {}

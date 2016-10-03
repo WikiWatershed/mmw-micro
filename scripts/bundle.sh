@@ -2,9 +2,13 @@
 
 set -e
 
+if [[ -n "${MMW_MICRO_DEBUG}" ]]; then
+    set -x
+fi
+
 # Default settings
-SOURCE_ROOT="/vagrant/src/app/"
-DIST_ROOT="/vagrant/dist/"
+SOURCE_ROOT="./src/app/"
+DIST_ROOT="./dist/"
 BIN="${SOURCE_ROOT}node_modules/.bin"
 
 STATIC_JS_DIR="${DIST_ROOT}js/"
@@ -16,7 +20,7 @@ STATIC_DATA_DIR="${DIST_ROOT}data/"
 BROWSERIFY="$BIN/browserify"
 ENTRY_JS_FILES="${SOURCE_ROOT}js/src/main.js"
 
-MINIFY_PLUGIN="-p [ minifyify --no-map ]"
+MINIFY_PLUGIN="-p [ ./src/app/node_modules/minifyify --no-map ]"
 
 NODE_SASS="$BIN/node-sass"
 ENTRY_SASS_DIR="${SOURCE_ROOT}sass/"
@@ -24,7 +28,7 @@ ENTRY_SASS_FILE="${ENTRY_SASS_DIR}main.scss"
 VENDOR_CSS_FILE="${STATIC_CSS_DIR}vendor.css"
 
 usage() {
-    echo -n "$(basename $0) [OPTION]...
+    echo -n "$(basename "${0}") [OPTION]...
 
 Bundle JS and CSS static assets.
 
@@ -100,15 +104,14 @@ COPY_FAVICON_COMMAND="cp \
 JS_DEPS=(jquery
          bootstrap
          retina.js
-         underscore
-         ./js/shim/shutterbug.js)
+         underscore)
 
 BROWSERIFY_EXT=""
 BROWSERIFY_REQ=""
 for DEP in "${JS_DEPS[@]}"
 do
-    BROWSERIFY_EXT+="-x $DEP "
-    BROWSERIFY_REQ+="-r $DEP "
+    BROWSERIFY_EXT+="-x ./src/app/node_modules/$DEP -r ./src/app/js/shim/shutterbug.js "
+    BROWSERIFY_REQ+="-r ./src/app/node_modules/$DEP -r ./src/app/js/shim/shutterbug.js "
 done
 
 VENDOR_COMMAND="
@@ -126,6 +129,9 @@ VAGRANT_COMMAND="cd ${SOURCE_ROOT} &
     $NODE_SASS $ENTRY_SASS_FILE -o ${STATIC_CSS_DIR} &
     $BROWSERIFY $ENTRY_JS_FILES $BROWSERIFY_EXT \
         -o ${STATIC_JS_DIR}main.js $EXTRA_ARGS &"
+
+# Clear out distribution root before build.
+rm -rf $DIST_ROOT*
 
 # Ensure static asset folders exist.
 mkdir -p \

@@ -1,0 +1,25 @@
+language: node_js
+
+node_js:
+  - "4"
+
+install:
+  - pip install --user awscli
+
+script:
+  - ./scripts/cibuild.sh
+
+deploy:
+  - provider: script
+    script: "bash -c 'MMW_MICRO_ENV=staging scripts/cipublish.sh'"
+    on:
+      repo: WikiWatershed/mmw-micro
+      branch: develop
+    skip_cleanup: true
+
+  - provider: script
+    script: "bash -c 'MMW_MICRO_ENV=production scripts/cipublish.sh'"
+    on:
+      repo: WikiWatershed/mmw-micro
+      tags: true
+    skip_cleanup: true

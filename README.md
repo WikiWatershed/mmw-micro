@@ -1,5 +1,7 @@
 # mmw-micro
 
+[![Build Status](https://travis-ci.org/WikiWatershed/mmw-micro.svg?branch=develop)](https://travis-ci.org/WikiWatershed/mmw-micro)
+
 A static micro site storm model.
 
 ### Requirements
@@ -29,12 +31,13 @@ $ ./scripts/test.sh
 
 ### Scripts
 
-| Name      | Description                                                   |
-| --------- | ------------------------------------------------------------- |
-| `bundle.sh`  | Bundle application assets into distribution directory      |
-| `cibuild.sh` | Build application for staging or release                   |
-| `server.sh`  | Run the development server                                 |
-| `setup.sh`   | Bring up the VM, then install Node.js dependencies         |
-| `infra.sh`   | Execute Terraform subcommands with remote state management |
-| `test.sh`    | Run linters and tests                                      |
-| `update.sh`  | Install local Node.js dependencies and bundle assets       |
+| Name           | Description                                                |
+| -------------- | ---------------------------------------------------------- |
+| `bundle.sh`    | Bundle application assets into distribution directory      |
+| `cibuild.sh`   | Build application for staging or release                   |
+| `cipublish.sh` | Publish application for staging or release                 |
+| `server.sh`    | Run `npm start` to run the development server              |
+| `setup.sh`     | Bring up the VM, then install Node.js dependencies         |
+| `infra.sh`     | Execute Terraform subcommands with remote state management |
+| `test.sh`      | Run linters and tests                                      |
+| `update.sh`    | Install local Node.js dependencies                         |
