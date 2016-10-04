@@ -1,0 +1,12 @@
+---
+aws_region: "us-east-1"
+aws_profile: "mmw-stg"
+
+aws_cli_version: "1.10.67"
+
+nodejs_version: "4.6.0"
+nodejs_npm_version: "2.15.11"
+
+shellcheck_version: "0.3.*"
+
+terraform_version: "0.7.3"
