@@ -10,10 +10,9 @@ A static micro site storm model.
 
 ### Quick setup
 
-Clone the project, `cd` into the directory, then run `./scripts/setup.sh` to create the Vagrant VM and then build the Docker containers.
+Clone the project, `cd` into the directory, then run `./scripts/setup.sh` to create the Vagrant VM and install npm dependencies.
 
-To start the servers during development:
-
+To start the server during development:
 ```bash
 $ vagrant ssh
 $ ./scripts/server.sh
@@ -32,9 +31,10 @@ $ ./scripts/test.sh
 
 | Name      | Description                                                   |
 | --------- | ------------------------------------------------------------- |
+| `bundle.sh`  | Bundle application assets into distribution directory      |
 | `cibuild.sh` | Build application for staging or release                   |
-| `server.sh`  | Run `npm start` to run the development server              |
+| `server.sh`  | Run the development server                                 |
 | `setup.sh`   | Bring up the VM, then install Node.js dependencies         |
 | `infra.sh`   | Execute Terraform subcommands with remote state management |
 | `test.sh`    | Run linters and tests                                      |
-| `update.sh`  | Install local Node.js dependencies                         |
+| `update.sh`  | Install local Node.js dependencies and bundle assets       |
