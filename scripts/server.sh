@@ -19,6 +19,6 @@ then
     then
         usage
     else
-      npm run start
+        cd /vagrant/dist/ && python -m SimpleHTTPServer 8000
     fi
 fi

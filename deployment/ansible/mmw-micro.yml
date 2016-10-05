@@ -10,6 +10,7 @@
     - { role: "azavea.ntp" }
     - { role: "azavea.nodejs" }
     - { role: "azavea.terraform" }
+    - { role: "azavea.git" }
     - { role: "mmw-micro.environment" }
     - { role: "mmw-micro.awscli" }
     - { role: "mmw-micro.shellcheck" }

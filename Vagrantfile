@@ -13,6 +13,8 @@ Vagrant.configure("2") do |config|
     vb.cpus = 2
   end
 
+  config.vm.network :forwarded_port, guest: 8000, host: 8000
+
   # Change working directory to /vagrant upon session start.
   config.vm.provision "shell", inline: <<SCRIPT
     if ! grep -q "cd /vagrant" "/home/vagrant/.bashrc"; then
