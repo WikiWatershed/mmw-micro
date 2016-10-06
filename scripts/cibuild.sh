@@ -19,8 +19,7 @@ then
     then
         usage
     else
-        ./scripts/update.sh
+        ./scripts/update.sh --production
         ./scripts/test.sh
-        npm run bundle
     fi
 fi

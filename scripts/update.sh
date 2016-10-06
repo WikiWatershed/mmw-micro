@@ -17,12 +17,17 @@ Updates application by installing Node.js dependencies.
 "
 }
 
+BUNDLE_ARGS=$*
+SOURCE_ROOT="/vagrant/src/app/"
+
 if [ "${BASH_SOURCE[0]}" = "${0}" ]
 then
     if [ "${1:-}" = "--help" ]
     then
         usage
     else
+        cd ${SOURCE_ROOT}
         npm install ${NPM_ARGS}
+        /vagrant/scripts/bundle.sh ${BUNDLE_ARGS}
     fi
 fi

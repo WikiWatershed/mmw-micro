@@ -13,3 +13,7 @@ deployment/ansible/*.retry
 deployment/terraform/.terraform
 *.tfstate
 *.tfplan
+
+# NodeJS / Browserify stuff
+node_modules/
+npm-debug.log
