@@ -1,25 +1,35 @@
 #
 # S3 resources
 #
-data "template_file" "read_only_bucket_policy" {
-  template = "${file("policies/s3-read-only-anonymous-user.json")}"
+data "aws_iam_policy_document" "mmw_micro" {
+  statement {
+    actions   = ["s3:GetObject"]
+    resources = ["arn:aws:s3:::${var.origin_bucket}/*"]
 
-  vars {
-    bucket = "${var.origin_bucket}"
+    principals {
+      type        = "AWS"
+      identifiers = ["${aws_cloudfront_origin_access_identity.mmw_micro.iam_arn}"]
+    }
   }
-}
 
-data "template_file" "server_side_encryption_policy" {
-  template = "${file("policies/s3-server-side-encryption.json")}"
+  statement {
+    actions = ["s3:*"]
 
-  vars {
-    bucket = "${var.config_bucket}"
+    resources = [
+      "arn:aws:s3:::${var.origin_bucket}",
+      "arn:aws:s3:::${var.origin_bucket}/*",
+    ]
+
+    principals {
+      type        = "AWS"
+      identifiers = ["${var.iam_publish_principal_arn}"]
+    }
   }
 }
 
 resource "aws_s3_bucket" "mmw_micro" {
   bucket = "${var.origin_bucket}"
-  policy = "${data.template_file.read_only_bucket_policy.rendered}"
+  policy = "${data.aws_iam_policy_document.mmw_micro.json}"
 
   tags {
     Project     = "${var.project}"

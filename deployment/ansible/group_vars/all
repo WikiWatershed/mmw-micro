@@ -9,4 +9,4 @@ nodejs_npm_version: "2.15.11"
 
 shellcheck_version: "0.3.*"
 
-terraform_version: "0.7.3"
+terraform_version: "0.7.5"

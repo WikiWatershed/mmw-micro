@@ -19,7 +19,7 @@ then
     then
         usage
     else
-        ./scripts/update.sh --production
         ./scripts/test.sh
+        ./scripts/update.sh --production
     fi
 fi
