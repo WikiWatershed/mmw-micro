@@ -1,0 +1,19 @@
+# Node
+npm-debug.log
+dist/
+
+# Vagrant
+.vagrant
+
+# Ansible
+deployment/ansible/roles/azavea.*
+deployment/ansible/*.retry
+
+# Terraform
+deployment/terraform/.terraform
+*.tfstate
+*.tfplan
+
+# NodeJS / Browserify stuff
+node_modules/
+npm-debug.log
