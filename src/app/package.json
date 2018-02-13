@@ -1,7 +1,7 @@
 {
   "name": "mmw-micro",
   "version": "0.1.0",
-  "description": "A static micro site storm model.",
+  "description": "A static runoff simulation site.",
   "main": "index.js",
   "dependencies": {
     "bootstrap": "3.3.4",
