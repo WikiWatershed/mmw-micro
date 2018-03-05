@@ -7,6 +7,6 @@ config_bucket = "staging-mmw-micro-config-us-east-1"
 acm_certificate_arn = "arn:aws:acm:us-east-1:956627593723:certificate/f45ec982-3bc7-4260-9e9f-c4ffac6b448e"
 
 r53_public_hosted_zone_id = "ZURQREPIGC39W"
-r53_public_hosted_zone_record = "micro.staging.app.wikiwatershed.org"
+r53_public_hosted_zone_record = "runoff.staging.app.wikiwatershed.org"
 
 iam_publish_principal_arn = "arn:aws:iam::146471631080:user/mmw-micro"
