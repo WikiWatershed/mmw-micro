@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/WikiWatershed/mmw-micro.svg?branch=develop)](https://travis-ci.org/WikiWatershed/mmw-micro)
 
-A static micro site storm model.
+A static runoff simulation site.
 
 ### Requirements
 
