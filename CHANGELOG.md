@@ -1,3 +1,7 @@
+## 0.2.1
+
+- Update SSL certificate arns.
+
 ## 0.2.0
 
 - Upgrade jQuery.
