@@ -4,7 +4,7 @@ logs_bucket = "production-mmw-micro-logs-us-east-1"
 origin_bucket = "production-mmw-micro-origin-us-east-1"
 config_bucket = "production-mmw-micro-config-us-east-1"
 
-acm_certificate_arn = "arn:aws:acm:us-east-1:146471631080:certificate/1e6187bb-062c-48d0-9bdd-0cc2e52e95bc"
+acm_certificate_arn = "arn:aws:acm:us-east-1:146471631080:certificate/733f3840-383e-4423-b279-53c223c25c9d"
 
 r53_public_hosted_zone_id = "ZRVL0TCLDP4BS"
 r53_public_hosted_zone_record = "runoff.app.wikiwatershed.org"
