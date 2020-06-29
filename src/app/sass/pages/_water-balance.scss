@@ -509,6 +509,72 @@
   border-radius: 0;
   border: solid 1px $black-12;
   padding: 0px;
+
+  &.bottom .arrow {
+    &.nlcd-11::after {
+      border-bottom-color: $nlcd-11;
+    }
+
+    &.nlcd-21::after {
+      border-bottom-color: $nlcd-21;
+    }
+
+    &.nlcd-22::after {
+      border-bottom-color: $nlcd-22;
+    }
+
+    &.nlcd-23::after {
+      border-bottom-color: $nlcd-23;
+    }
+
+    &.nlcd-24::after {
+      border-bottom-color: $nlcd-24;
+    }
+
+    &.nlcd-31::after {
+      border-bottom-color: $nlcd-31;
+    }
+
+    &.nlcd-41::after {
+      border-bottom-color: $nlcd-41;
+    }
+
+    &.nlcd-52::after {
+      border-bottom-color: $nlcd-52;
+    }
+
+    &.nlcd-71::after {
+      border-bottom-color: $nlcd-71;
+    }
+
+    &.nlcd-81::after {
+      border-bottom-color: $nlcd-81;
+    }
+
+    &.nlcd-82::after {
+      border-bottom-color: $nlcd-82;
+    }
+
+    &.nlcd-90::after {
+      border-bottom-color: $nlcd-90;
+    }
+
+    &.soil-a::after {
+      border-bottom-color: $soil-a;
+    }
+
+    &.soil-b::after {
+      border-bottom-color: $soil-b;
+    }
+
+    &.soil-c::after {
+      border-bottom-color: $soil-c;
+    }
+
+    &.soil-d::after {
+      border-bottom-color: $soil-d;
+    }
+  }
 }
 
 .popover-title {

@@ -131,7 +131,7 @@ var initBootstrap = function() {
         var $popover = $(popover),
             category = $popover.data('category') || 'default',
             template = '<div class="popover" role="tooltip">' +
-                '<div class="arrow"></div>' +
+                '<div class="arrow ' + ' ' + category + '"></div>' +
                 '<h3 class="popover-title ' + ' ' + category + '"></h3>' +
                 '<div class="popover-content"></div></div>',
             entry = modificationConfig[$popover.data('name')],
