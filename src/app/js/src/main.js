@@ -131,7 +131,7 @@ var initBootstrap = function() {
         var $popover = $(popover),
             category = $popover.data('category') || 'default',
             template = '<div class="popover" role="tooltip">' +
-                '<div class="arrow"></div>' +
+                '<div class="arrow ' + ' ' + category + '"></div>' +
                 '<h3 class="popover-title ' + ' ' + category + '"></h3>' +
                 '<div class="popover-content"></div></div>',
             entry = modificationConfig[$popover.data('name')],
@@ -142,7 +142,7 @@ var initBootstrap = function() {
             };
 
         if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            $popover.popover(_.extend(options, {triggger:'click'}));
+            $popover.popover(_.extend(options, {trigger:'click'}));
 
             $popover.click(function() {
                 $('[data-toggle="popover"]').not(this).popover('hide'); //all but this

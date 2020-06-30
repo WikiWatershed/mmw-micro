@@ -22,7 +22,7 @@ then
         usage
     else
         # Lint Bash scripts
-        if which shellcheck > /dev/null; then
+        if command -v shellcheck > /dev/null; then
             shellcheck scripts/*.sh
         fi
 
