@@ -22,9 +22,9 @@ $active: #51dec2; /*Bright*/
 $brand-primary: #389b9b; /*Teal*/
 $sky-blue: #bbe5f5; /*Sky*/
 $water: #49b8ea; /*Water*/
-$et: #c2d33c; /*Evapotranspiration*/
-$i: #f8aa00; /*Infiltration*/
-$r: #cf4300; /*Runoff*/
+$et: #2d8bff; /*Evapotranspiration*/
+$i: #f2cf46; /*Infiltration*/
+$r: #ed3b3b; /*Runoff*/
 
 //Heights
 $footer-height: 55%;
@@ -70,3 +70,8 @@ $font-family: 'Roboto', helvetica, arial, sans-serif;
 $font-h1: 1.5rem;
 $font-h2: 1rem;
 $font-h3: 0.7rem;
+
+//Media queries
+$size-md: 890px;
+$size-sm: 575px;
+$size-xs: 450px;

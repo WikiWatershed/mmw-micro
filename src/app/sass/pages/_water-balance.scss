@@ -21,6 +21,14 @@
     (min-resolution: 192dpi) {
        background-image: url('../img/art_clouds@2x.png');
     }
+
+    @media (max-width: $size-md) {
+      padding: 0;
+      min-width: auto;
+      overflow: hidden;
+      width: 100%;
+      height: auto;
+    }
   }
 
   .canvas {
@@ -32,6 +40,17 @@
     margin-right: 360px;
     overflow: auto;
     white-space: nowrap;
+
+    @media (max-width: $size-md) {
+      position: relative;
+      min-height: 540px;
+      margin: auto;
+      z-index: 1;
+    }
+
+    @media (max-width: $size-sm) {
+      min-height: 500px;
+    }
   }
 
   //Model Output =====================================
@@ -47,6 +66,21 @@
     right: 100px;
     bottom: 0;
 
+    @media (max-width: $size-md) {
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+    }
+
+    @media (max-width: $size-sm) {
+      width: 300px;
+    }
+
+    @media (max-width: $size-xs) {
+      left: 10px;
+      transform: none;
+    }
+
     .land-container {
       width: 100%;
       height: auto;
@@ -55,6 +89,14 @@
       display: block;
       margin: 0 auto;
       z-index: 200;
+
+      @media (max-width: $size-md) {
+        top: 0;
+      }
+
+      @media (max-width: $size-sm) {
+        top: 67px;
+      }
 
       .land {
         width: 100%;
@@ -76,6 +118,10 @@
       margin: 0 auto;
       z-index: 200;
 
+      @media (max-width: $size-md) {
+        top: 280px;
+      }
+
       .soil {
         width: 100%;
 
@@ -94,6 +140,10 @@
     position: absolute;
     top: 90px;
     z-index: 100;
+
+    @media (max-width: $size-sm) {
+      top: 40px;
+    }
   }
 
   #effect-evapo {
@@ -103,6 +153,13 @@
     width: 84px;
     height: 140px;
     z-index: 100;
+
+    @media (max-width: $size-sm) {
+      bottom: 90px;
+      left: 200px;
+      width: 64px;
+      height: 120px;
+    }
 
     svg {
       width: auto;
@@ -119,6 +176,13 @@
     height: 120px;
     z-index: 100;
 
+    @media (max-width: $size-sm) {
+      top: 60px;
+      right: 210px;
+      width: 97px;
+      height: 90px;
+    }
+
     svg {
       width: auto;
       height: 100%;  //Animate this value for scale
@@ -133,6 +197,13 @@
     width: 98px;
     height: 140px;
     z-index: 100;
+
+    @media (max-width: $size-sm) {
+      top: 40px;
+      left: 220px;
+      width: 68px;
+      height: 110px;
+    }
 
     svg {
       width: auto;
@@ -165,6 +236,16 @@
     padding-bottom: 48px;
     white-space: normal;
 
+    @media (max-width: $size-md) {
+      margin: 0;
+      transform-origin: top;
+      top: 70px;
+      bottom: 10px;
+      right: 10px;
+      width: 60px;
+      padding: 10px 10px 35px;
+    }
+
     .column {
       position: relative;
       display: block;
@@ -173,7 +254,7 @@
       transition: height 0.3s ease;
 
       label {
-        color: $paper;
+        color: $black;
         padding: 0.4rem;
         text-align: right;
       }
@@ -209,11 +290,54 @@
       border-bottom-left-radius: 0.3rem;
       border-top-left-radius: 0.3rem;
       z-index: 200;
+
+      @media (max-width: $size-md) {
+        width: 14px;
+        margin: 10px 10px 35px 10px;
+      }
     }
 
     label {
       display: block;
       text-align: center;
+    }
+  }
+
+  .well-container {
+    @media (max-width: $size-md) {
+      display: flex;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      border-radius: 0.3rem;
+      overflow: hidden;
+
+      .well-custom {
+        position: relative !important;
+        top: initial !important;
+        left: initial !important;
+        bottom: initial !important;
+        min-width: initial !important;
+        border-radius: 0 !important;
+        padding: 8px !important;
+        flex: 1;
+
+        h1 {
+          font-size: 20px;
+        }
+
+        label {
+          padding-top: 4px;
+          margin: 5px 0;
+          padding: 0;
+          display: block;
+        }
+      }
+    }
+
+    @media (max-width: $size-xs) {
+      left: 0;
+      transform: none;
     }
   }
 
@@ -282,6 +406,12 @@
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.74);
     overflow-y: auto;
 
+    @media (max-width: $size-md) {
+      width: 100%;
+      z-index: 10;
+      position: relative;
+    }
+
     .slider-wrapper {
       display: inline-block;
     }
@@ -295,6 +425,14 @@
       padding: 0;
       white-space: nowrap;
       float: left;
+
+      @media (max-width: $size-md) {
+        display: flex;
+        overflow: auto;
+        white-space: normal;
+        flex-wrap: wrap;
+        min-width: 100%;
+      }
 
       li {
         display: inline-block;
@@ -509,6 +647,18 @@
   border-radius: 0;
   border: solid 1px $black-12;
   padding: 0px;
+
+  @media (max-width: $screen-md) {
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin: 0 !important;
+
+    > .arrow {
+      display: none !important;
+    }
+  }
 
   &.bottom .arrow {
     &.nlcd-11::after {
