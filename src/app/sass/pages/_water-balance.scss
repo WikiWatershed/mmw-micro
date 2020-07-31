@@ -654,10 +654,15 @@
     transform: translate(-50%, -50%);
     width: 100%;
     margin: 0 !important;
-
+    
     > .arrow {
       display: none !important;
     }
+  }
+  
+  @media (min-width: $screen-sm) {
+    user-select: none;
+    pointer-events: none;
   }
 
   &.bottom .arrow {
