@@ -25,6 +25,10 @@ body {
   font-size: 1rem;
   font-smoothing: subpixel-antialiased;
   -webkit-font-smoothing: subpixel-antialiased;
+
+  @media (max-width: $size-md) {
+    overflow: auto;
+  }
 }
 
 a {

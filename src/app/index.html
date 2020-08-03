@@ -50,132 +50,133 @@
             <div class="model-container"> <!-- Model Container -->
 
                 <!-- OUTPUT WELLS -->
+                <div class="well-container">
+                    <div id="well-precip" class="well-custom text-center"> <!-- Precip Well -->
+                        <h1 class="precip">0.0 cm</h1>
+                        <label>Precipitation</label>
+                    </div> <!-- End Precip Well -->
 
-                <div id="well-precip" class="well-custom text-center"> <!-- Precip Well -->
-                    <h1 class="precip">0.0 cm</h1>
-                    <label>Precipitation</label>
-                </div> <!-- End Precip Well -->
+                    <div id="well-evapo" class="well-custom text-center"> <!-- Evapotranspiration Well -->
+                        <h1 class="evapo">0.0 cm</h1>
+                        <label>Evapotranspiration</label>
+                    </div> <!-- End Evapotranspiration Well -->
 
-                <div id="well-evapo" class="well-custom text-center"> <!-- Evapotranspiration Well -->
-                    <h1 class="evapo">0.0 cm</h1>
-                    <label>Evapotranspiration</label>
-                </div> <!-- End Evapotranspiration Well -->
+                    <div id="well-runoff" class="well-custom text-center"> <!-- Runoff Well -->
+                        <h1 class="runoff">0.0 cm</h1>
+                        <label>Runoff</label>
+                    </div> <!-- End Runoff Well -->
 
-                <div id="well-runoff" class="well-custom text-center"> <!-- Runoff Well -->
-                    <h1 class="runoff">0.0 cm</h1>
-                    <label>Runoff</label>
-                </div> <!-- End Runoff Well -->
-
-                <div id="well-infil" class="well-custom text-center"> <!-- Infiltration Well -->
-                    <h1 class="infil">0.0 cm</h1>
-                    <label>Infiltration</label>
-                </div> <!-- End Infiltration Well -->
-
+                    <div id="well-infil" class="well-custom text-center"> <!-- Infiltration Well -->
+                        <h1 class="infil">0.0 cm</h1>
+                        <label>Infiltration</label>
+                    </div> <!-- End Infiltration Well -->
+                </div>
                 <!-- LANDCOVER -->
 
-                <div class="tab-content land-container text-center"> <!-- Land Cover Type -->
+                <div class="tabs-container">
+                    <div class="tab-content land-container text-center"> <!-- Land Cover Type -->
 
-                    <!-- Effects -->
+                        <!-- Effects -->
 
-                    <div id="effect-precip" class="animated fadeInDown">
-                        <img src="img/art_precip.png" alt="precipitation">
-                    </div>
+                        <div id="effect-precip" class="animated fadeInDown">
+                            <img src="img/art_precip.png" alt="precipitation">
+                        </div>
 
-                    <div id="effect-evapo" class="animated fadeInUp">
-                        <svg style="width: 100%; height: 100%">
-                            <image xlink:href="img/art_evapo.svg" src="img/art_evapo.png" width="100%" height="100%"></image>
-                        </svg>
-                    </div>
+                        <div id="effect-evapo" class="animated fadeInUp">
+                            <svg style="width: 100%; height: 100%">
+                                <image xlink:href="img/art_evapo.svg" src="img/art_evapo.png" width="100%" height="100%"></image>
+                            </svg>
+                        </div>
 
-                    <!-- Land Cover -->
+                        <!-- Land Cover -->
 
-                    <div id="land-open_water" role="tabpanel" class="tab-pane land">
-                        <img src="img/art_land_openwater.png" alt="Open Water">
-                    </div>
+                        <div id="land-open_water" role="tabpanel" class="tab-pane land">
+                            <img src="img/art_land_openwater.png" alt="Open Water">
+                        </div>
 
-                    <div id="land-woody_wetlands" role="tabpanel" class="tab-pane land">
-                        <img src="img/art_land_wetlands.png" alt="Wetlands">
-                    </div>
+                        <div id="land-woody_wetlands" role="tabpanel" class="tab-pane land">
+                            <img src="img/art_land_wetlands.png" alt="Wetlands">
+                        </div>
 
-                    <div id="land-developed_low" role="tabpanel" class="tab-pane active land">
-                        <img src="img/art_land_lir.png" alt="Developed, Low Intensity">
-                    </div>
+                        <div id="land-developed_low" role="tabpanel" class="tab-pane active land">
+                            <img src="img/art_land_lir.png" alt="Developed, Low Intensity">
+                        </div>
 
-                    <div id="land-developed_med" role="tabpanel" class="tab-pane land">
-                        <img src="img/art_land_hir.png" alt="Developed, Medium Intensity">
-                    </div>
+                        <div id="land-developed_med" role="tabpanel" class="tab-pane land">
+                            <img src="img/art_land_hir.png" alt="Developed, Medium Intensity">
+                        </div>
 
-                    <div id="land-developed_high" role="tabpanel" class="tab-pane land">
-                        <img src="img/art_land_commercial.png" alt="Developed, High Intensity">
-                    </div>
+                        <div id="land-developed_high" role="tabpanel" class="tab-pane land">
+                            <img src="img/art_land_commercial.png" alt="Developed, High Intensity">
+                        </div>
 
-                    <div id="land-grassland" role="tabpanel" class="tab-pane land">
-                        <img src="img/art_land_grassland.png" alt="Grassland/Herbaceous">
-                    </div>
+                        <div id="land-grassland" role="tabpanel" class="tab-pane land">
+                            <img src="img/art_land_grassland.png" alt="Grassland/Herbaceous">
+                        </div>
 
-                    <div id="land-deciduous_forest" role="tabpanel" class="tab-pane land">
-                        <img src="img/art_land_forest.png" alt="Deciduous Forest">
-                    </div>
+                        <div id="land-deciduous_forest" role="tabpanel" class="tab-pane land">
+                            <img src="img/art_land_forest.png" alt="Deciduous Forest">
+                        </div>
 
-                    <div id="land-developed_open" role="tabpanel" class="tab-pane land">
-                        <img src="img/art_land_turfGrass.png" alt="Developed, Open Space">
-                    </div>
+                        <div id="land-developed_open" role="tabpanel" class="tab-pane land">
+                            <img src="img/art_land_developed-open.png" alt="Developed, Open Space">
+                        </div>
 
-                    <div id="land-pasture" role="tabpanel" class="tab-pane land">
-                        <img src="img/art_land_pasture.png" alt="Pasture/Hay">
-                    </div>
+                        <div id="land-pasture" role="tabpanel" class="tab-pane land">
+                            <img src="img/art_land_pasture.png" alt="Pasture/Hay">
+                        </div>
 
-                    <div id="land-cultivated_crops" role="tabpanel" class="tab-pane land">
-                        <img src="img/art_land_rowCrops.png" alt="Cultivated Crops">
-                    </div>
+                        <div id="land-cultivated_crops" role="tabpanel" class="tab-pane land">
+                            <img src="img/art_land_rowCrops.png" alt="Cultivated Crops">
+                        </div>
 
-                    <div id="land-shrub" role="tabpanel" class="tab-pane land">
-                        <img src="img/art_land_chaparral.png" alt="Shrub/Scrub">
-                    </div>
+                        <div id="land-shrub" role="tabpanel" class="tab-pane land">
+                            <img src="img/art_land_chaparral.png" alt="Shrub/Scrub">
+                        </div>
 
-                    <div id="land-barren_land" role="tabpanel" class="tab-pane land">
-                        <img src="img/art_land_desert.png" alt="Barren Land (Rock/Sand/Clay)">
-                    </div>
+                        <div id="land-barren_land" role="tabpanel" class="tab-pane land">
+                            <img src="img/art_land_desert.png" alt="Barren Land (Rock/Sand/Clay)">
+                        </div>
 
-                </div> <!-- End Land Cover Type -->
+                    </div> <!-- End Land Cover Type -->
 
-                <!-- SOIL -->
+                    <!-- SOIL -->
 
-                <div class="tab-content soil-container text-center"> <!-- Soil Type -->
+                    <div class="tab-content soil-container text-center"> <!-- Soil Type -->
 
-                    <!-- Effects -->
+                        <!-- Effects -->
 
-                    <div id="effect-runoff" class="animated fadeInRight">
-                        <svg style="width: 100%; height: 100%">
-                            <image xlink:href="img/art_runoff.svg" src="img/art_runoff.png" width="100%" height="100%"></image>
-                        </svg>
-                    </div>
+                        <div id="effect-runoff" class="animated fadeInRight">
+                            <svg style="width: 100%; height: 100%">
+                                <image xlink:href="img/art_runoff.svg" src="img/art_runoff.png" width="100%" height="100%"></image>
+                            </svg>
+                        </div>
 
-                    <div id="effect-infiltration" class="animated fadeInDown">
-                        <svg style="width: 100%; height: 100%">
-                            <image xlink:href="img/art_infiltration.svg" src="img/art_infiltration.png" width="100%" height="100%"></image>
-                        </svg>
-                    </div>
+                        <div id="effect-infiltration" class="animated fadeInDown">
+                            <svg style="width: 100%; height: 100%">
+                                <image xlink:href="img/art_infiltration.svg" src="img/art_infiltration.png" width="100%" height="100%"></image>
+                            </svg>
+                        </div>
 
-                    <!-- Land Cover -->
+                        <!-- Land Cover -->
 
-                    <div id="soil-sand" role="tabpanel" class="tab-pane soil active">
-                        <img src="img/art_soil_sand.png" alt="sand">
-                    </div>
+                        <div id="soil-sand" role="tabpanel" class="tab-pane soil active">
+                            <img src="img/art_soil_sand.png" alt="sand">
+                        </div>
 
-                    <div id="soil-loam" role="tabpanel" class="tab-pane soil">
-                        <img src="img/art_soil_loam.png" alt="loam">
-                    </div>
+                        <div id="soil-loam" role="tabpanel" class="tab-pane soil">
+                            <img src="img/art_soil_loam.png" alt="loam">
+                        </div>
 
-                    <div id="soil-sandyClay" role="tabpanel" class="tab-pane soil">
-                        <img src="img/art_soil_sandyClay.png" alt="sandyClay">
-                    </div>
+                        <div id="soil-sandyClay" role="tabpanel" class="tab-pane soil">
+                            <img src="img/art_soil_sandyClay.png" alt="sandyClay">
+                        </div>
 
-                    <div id="soil-clayLoam" role="tabpanel" class="tab-pane soil">
-                        <img src="img/art_soil_clayLoam.png" alt="clayLoam">
-                    </div>
-                </div> <!-- End Soil Type -->
-
+                        <div id="soil-clayLoam" role="tabpanel" class="tab-pane soil">
+                            <img src="img/art_soil_clayLoam.png" alt="clayLoam">
+                        </div>
+                    </div> <!-- End Soil Type -->
+                </div>
             </div> <!-- End Model Container -->
 
             <div id="water-column-container" class="well-custom"> <!-- Water Column -->
@@ -227,7 +228,7 @@
 
                     <li id="thumb-developed_open">
                         <a href="#land-developed_open" aria-controls="filter-tab" role="tab" data-toggle="tab" class="nlcd-21">
-                            <img src="img/thumb_turfGrass.png" alt="Developed, Open Space" data-name="developed_open" data-container="body" data-toggle="popover" data-placement="bottom" data-category="nlcd-21" >
+                            <img src="img/thumb_developed-open.png" alt="Developed, Open Space" data-name="developed_open" data-container="body" data-toggle="popover" data-placement="bottom" data-category="nlcd-21" >
                         </a>
                         <label>Developed-Open</label>
                     </li>
