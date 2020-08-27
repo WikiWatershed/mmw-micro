@@ -13,7 +13,17 @@ header {
   box-shadow: 0 0 4px $black-54;
   padding: 0 1rem;
 
+  @media (max-width: $size-md) {
+    display: flex;
+    padding: 0 10px;
+  }
+
   .brand {
+    @media (max-width: $size-md) {
+      width: auto;
+      flex: none;
+    }  
+
     a {
       float: left;
       line-height: $height-lg;
@@ -32,10 +42,20 @@ header {
   .navigation {
     float: right;
     display: inline-block;
+    
+    @media (max-width: $size-md) {
+      display: flex;
+      margin-left: auto;
+    }
 
     .main {
       list-style-type: none;
       display: inline-block;
+
+      @media (max-width: $size-md) {
+        margin: 0;
+        padding: 0;
+      }
 
       li.header-link {
         line-height: $height-lg !important;
@@ -44,6 +64,10 @@ header {
         margin-left: 1rem;
         display: inline-block;
         float: left;
+
+        @media (max-width: $size-md) {
+          margin-left: 5px;
+        }
 
         .dropdown-menu {
           left: auto;

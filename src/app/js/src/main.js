@@ -131,7 +131,7 @@ var initBootstrap = function() {
         var $popover = $(popover),
             category = $popover.data('category') || 'default',
             template = '<div class="popover" role="tooltip">' +
-                '<div class="arrow"></div>' +
+                '<div class="arrow ' + ' ' + category + '"></div>' +
                 '<h3 class="popover-title ' + ' ' + category + '"></h3>' +
                 '<div class="popover-content"></div></div>',
             entry = modificationConfig[$popover.data('name')],
@@ -141,11 +141,22 @@ var initBootstrap = function() {
                 title: entry.name
             };
 
-        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            $popover.popover(_.extend(options, {triggger:'click'}));
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/windows phone/i.test(userAgent) || /android/i.test(userAgent) || /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            $popover.popover(_.extend(options, {trigger:'click'}));
 
             $popover.click(function() {
                 $('[data-toggle="popover"]').not(this).popover('hide'); //all but this
+            });
+
+            $('body').on('click', function (e) {
+                $('[data-toggle=popover]').each(function () {
+                    // hide any open popovers when the anywhere else in the body is clicked
+                    if (!$(this).is(e.target) && $(this).has(e.target).length === 0 && $('.popover').has(e.target).length === 0) {
+                        $(this).popover('hide');
+                    }
+                });
             });
         } else {
             $popover.popover(_.extend(options, {trigger: 'hover'}));
