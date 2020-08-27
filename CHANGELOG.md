@@ -1,3 +1,9 @@
+## 0.3.0
+
+- Fix Tooltips and Popovers [#23](https://github.com/WikiWatershed/mmw-micro/pull/23)
+- Mobile optimization and accessibility upgrades [#27](https://github.com/WikiWatershed/mmw-micro/pull/27)
+- Bump Bootstrap [#25](https://github.com/WikiWatershed/mmw-micro/pull/25)
+
 ## 0.2.1
 
 - Update SSL certificate arns.
