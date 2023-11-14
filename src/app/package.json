@@ -11,9 +11,9 @@
     "underscore": "1.8.3"
   },
   "devDependencies": {
-    "browserify": "9.0.3",
+    "browserify": "^10",
     "minifyify": "7.0.0",
-    "node-sass": "3.3.2",
+    "node-sass": "^5",
     "watchify": "3.1.0"
   },
   "scripts": {
